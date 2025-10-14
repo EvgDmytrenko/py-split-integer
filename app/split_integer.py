@@ -9,5 +9,3 @@ def split_integer(value: int, number_of_parts: int) -> list:
 
 def test_function() -> None:
     pass
-
-
