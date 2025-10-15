@@ -8,16 +8,16 @@ def test_sum_of_the_parts_should_be_equal_to_value() -> None:
 
 def test_should_split_into_equal_parts_when_value_divisible_by_parts() -> None:
     parts_of_int = split_integer(value=16, number_of_parts=4)
-    assert (parts_of_int[0] == parts_of_int[1] and
-            parts_of_int[1] == parts_of_int[2] and
-            parts_of_int[2] == parts_of_int[3])
+    assert (parts_of_int[0] == parts_of_int[1]
+            and parts_of_int[1] == parts_of_int[2]
+            and parts_of_int[2] == parts_of_int[3])
 
 
-def test_should_split_into_not_equal_parts_when_value_is_not_divisible_by_parts() -> None:
+def test_should_split_on_not_equal_parts_when_value_is_not_divisible() -> None:
     assert (split_integer(value=16, number_of_parts=5) != [3, 3, 3, 3, 3])
 
 
-def test_should_not_split_only_into_equal_numbers_and_increment_the_last_one() -> None:
+def test_should_not_split_into_equal_nums_and_increment_the_last_one() -> None:
     assert (split_integer(32, 6) != [5, 5, 5, 5, 5, 6])
 
 
